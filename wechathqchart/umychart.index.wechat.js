@@ -1,3 +1,36 @@
+/*
+    copyright (c) 2018 jones
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    开源项目 https://github.com/jones2000/HQChart
+
+    jones_2000@163.com
+
+    指标基类及定制指标
+*/
+
+import {
+    JSCommonResource_Global_JSChartResource as g_JSChartResource,
+} from './umychart.resource.wechat.js'
+
+//图形库
+import {
+    JSCommonChartPaint_IChartPainting as IChartPainting,
+    JSCommonChartPaint_ChartSingleText as ChartSingleText,
+    JSCommonChartPaint_ChartLine as ChartLine,
+    JSCommonChartPaint_ChartPointDot as ChartPointDot,
+    JSCommonChartPaint_ChartStick as ChartStick,
+    JSCommonChartPaint_ChartLineStick as ChartLineStick,
+    JSCommonChartPaint_ChartStickLine as ChartStickLine,
+    JSCommonChartPaint_ChartOverlayKLine as ChartOverlayKLine,
+    JSCommonChartPaint_ChartMinuteInfo as ChartMinuteInfo,
+    JSCommonChartPaint_ChartPie as ChartPie,
+    JSCommonChartPaint_ChartCircle as ChartCircle,
+    JSCommonChartPaint_ChartChinaMap as ChartChinaMap,
+    JSCommonChartPaint_ChartRadar as ChartRadar,
+} from "./umychart.chartpaint.wechat.js";
+
 //////////////////////////////////////////////////////////
 //
 //  指标信息

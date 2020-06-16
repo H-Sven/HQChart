@@ -160,7 +160,9 @@ DefaultData.GetKLineOption=function()
             MaxReqeustDataCount: 1000, //日线数据最近1000天
             MaxRequestMinuteDayCount: 15,    //分钟数据最近15天
             PageSize: 50, //一屏显示多少数据 
-            IsShowTooltip: true //是否显示K线提示信息
+            IsShowTooltip: true, //是否显示K线提示信息
+            RightSpaceCount:2,  //右边预留2个K线宽度空白
+            ZoomType:1,         //PC页面版 缩放以十字光标为中心两边缩放
         },
 
         KLineTitle: //标题设置
@@ -325,7 +327,7 @@ DefaultData.GetKLineToolbar=function()
     {
         Text: '主图线型',
         Selected: [],
-        Menu: [{Name:"空心K线",Value:3}, {Name:"实心K线",Value:0}, {Name:"美国线",Value:2}, {Name:"收盘线",Value:1}],
+        Menu: [{Name:"空心K线",Value:3}, {Name:"实心K线",Value:0}, {Name:"美国线",Value:2}, {Name:"收盘线",Value:1},{Name:"面积图",Value:4}],
         IsShow:true,
     };
 
@@ -1278,9 +1280,7 @@ export default
 </script>
 
 
-<style scoped lang="scss">
-
-$border: 1px solid #e1ecf2;
+<style scoped lang="less">
 
 * {
     font: 14px/normal "Microsoft Yahei";

@@ -15,10 +15,12 @@
     !!手机上字体大小需要*分辨率比
 */
 
+/* umychart.js 里面已经有了
 function GetDevicePixelRatio()
 {
     return window.devicePixelRatio || 1;
 }
+*/
 
 //黑色风格
 var BLACK_STYLE=
@@ -37,10 +39,11 @@ var BLACK_STYLE=
 
     Minute: 
     {
-      VolBarColor: "rgb(255,236,0)",
-      PriceColor: "rgb(25,180,231)",
-      AreaPriceColor:"rgba(63,158,255,.3)",
-      AvPriceColor: "rgb(255,236,0)",
+        VolBarColor: "rgb(255,236,0)",
+        PriceColor: "rgb(25,180,231)",
+        AreaPriceColor:"rgba(63,158,255,.3)",
+        AvPriceColor: "rgb(255,236,0)",
+        PositionColor:'rgb(218,165,32)', 
     },
 
 
@@ -59,14 +62,25 @@ var BLACK_STYLE=
     FrameSplitTextFont: 12*GetDevicePixelRatio() +"px 微软雅黑",        //坐标刻度文字字体
     FrameTitleBGColor: "rgb(0,0,0)",      //标题栏背景色
 
+    Frame:{ XBottomOffset:1*GetDevicePixelRatio() },   //X轴文字向下偏移
+
+    FrameLatestPrice : {
+        TextColor:'rgb(255,255,255)',   //最新价格文字颜色
+        UpBarColor:"rgb(238,21,21)",    //上涨
+        DownBarColor:"rgb(25,158,0)",   //下跌
+        UnchagneBarColor:"rgb(190,190,190)",   //平盘
+        BGAlpha:0.6
+    },
+
     CorssCursorBGColor: "rgb(43,54,69)",            //十字光标背景
     CorssCursorTextColor: "rgb(255,255,255)",
     CorssCursorTextFont: 12*GetDevicePixelRatio() +"px 微软雅黑",
-    CorssCursorPenColor: "rgb(130,130,130)",           //十字光标线段颜色
+    CorssCursorHPenColor: "rgb(130,130,130)",           //十字光标线段颜色
+    CorssCursorVPenColor: "rgb(130,130,130)",           //十字光标线段颜色
 
     KLine:
     {
-        MaxMin: { Font: 12*GetDevicePixelRatio() +'px 微软雅黑', Color: 'rgb(111,111,111)' },   //K线最大最小值显示
+        MaxMin: { Font: 12*GetDevicePixelRatio() +'px 微软雅黑', Color: 'rgb(255,250,240)' },   //K线最大最小值显示
         Info:  //信息地雷
         {
             Investor:
